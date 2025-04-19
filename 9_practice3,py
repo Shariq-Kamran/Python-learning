@@ -1,0 +1,13 @@
+def gen_table(num):
+    with open(f"9_practice3/table_{num}.txt","w") as data:
+        
+        # table=""
+        # for i in range (1,11):
+        #     table += f"{num} x {i} = {num*i}\n"
+
+        table="\n".join([f"{num} x {i} = {num*i}" for i in range(1,11)])
+
+        data.write(table)
+
+for i in range(2,21):
+    gen_table(i)
